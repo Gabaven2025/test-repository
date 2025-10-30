@@ -1,0 +1,70 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>シンプルHTML+CSSテンプレート</title>
+  <!--
+    使い方:
+    - このファイルを保存してそのまま開けば動作します。
+    - 必要なセクションをコピーして使ってください。
+    - 色やフォントは :root の変数を変更すると全体に反映されます。
+  -->
+  <style>
+    /* カスタムプロパティ（テーマのカスタマイズはここだけでOK） */
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --primary:#2563eb; /* ボタン/アクセント */
+      --muted:#6b7280;
+      --radius:12px;
+      --max-width:1100px;
+      --gap:1.25rem;
+      --ff-sans: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+    }
+
+    /* リセット（簡易） */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--ff-sans);
+      background:linear-gradient(180deg,var(--bg),#ffffff);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.5;
+      padding:2rem 1rem;
+      display:flex;
+      justify-content:center;
+    }
+
+    /* 中央ラッパー */
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:var(--gap);
+    }
+
+    /* ヘッダー */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+    }
+    .logo{font-weight:700; letter-spacing:0.3px}
+    nav a{
+      text-decoration:none;
+      color:var(--muted);
+      margin-left:1rem;
+      font-size:0.95rem;
+    }
+
+    /* ヒーロー */
+    .hero{
+      background:linear-gradient(90deg, rgba(37,99,235,0.08), rgba(99,102,241,0.04));
+      border-radius:var(--radius);
